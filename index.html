@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Rem calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="font-size-wrapper">
+            <div>Choose your &lt;HTML&gt; font-size (px)</div>
+            <input id="font-size" type="number">
+        </div>
+        <div class="sizes-to-convert-wrapper">
+            <div>px sizes to convert</div>
+            <input id="sizes-to-convert" type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20">
+        </div>
+        <div class="calc-button-wrapper">
+            <button id="calc-button">Calculate</button>
+        </div>
+        <div class="calc-results-wrapper">
+            <ul id="calc-results"></ul>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
