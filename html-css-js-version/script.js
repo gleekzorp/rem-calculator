@@ -1,5 +1,3 @@
-// TODO: Need to add a base to the innerhtml
-
 const fontSize = document.getElementById('font-size')
 const sizesToConvert = document.getElementById('sizes-to-convert')
 const calcButton = document.getElementById('calc-button')
