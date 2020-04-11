@@ -1,13 +1,106 @@
+/* Colors */
+/* #335C67 - deep space sparkle */
+/* #427aa1 - queen blue */
+/* #ebf2fa - anti-flash white */
+/* #6c6f7d - aurometalsaurus */
+/* #020202 - rich black (fogra39) */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebf2fa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 12rem) auto;
+  background-color: #427aa1;
+  padding: 2rem;
+  color: #ebf2fa;
+  font-size: 2rem;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 3rem #020202;
+  /* box-shadow: 1rem 1rem 0.5rem #020202; */
+  /* box-shadow: 1rem 1rem 0.5rem #335c67; */
+  /* box-shadow: 0rem 0rem 4rem 1rem #335c67; */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+input {
+  outline: none;
+  border-radius: .5rem;
+}
+
+.font-size-wrapper input{
+  width: 25%;
+  padding: 1rem .5rem;
+}
+.font-size-wrapper div{
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sizes-to-convert-wrapper input {
+  width: 100%;
+  padding: 1rem .5rem;
+}
+
+input[type=text] {
+  font-size: 2rem;
+}
+input[type=number] {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sizes-to-convert-wrapper div{
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.calc-button-wrapper button {
+  background-color: #6c6f7d;
+  color: #ebf2fa;
+  border: 0.125rem solid #020202;
+  padding: 0.625rem 1.25rem;
+  font-size: 2rem;
+  border-radius: .5rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.calc-button-wrapper button:hover {
+  background-color: #335c67;
+}
+
+.bold {
+  font-weight: 700;
+  color: black;
 }
