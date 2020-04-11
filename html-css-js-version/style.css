@@ -86,3 +86,8 @@ input[type=number] {
 .calc-button-wrapper button:hover {
     background-color: #335c67;
 }
+
+.bold {
+    font-weight: 700;
+    color: black;
+}

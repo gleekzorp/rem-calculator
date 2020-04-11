@@ -2,23 +2,43 @@ const fontSize = document.getElementById('font-size')
 const sizesToConvert = document.getElementById('sizes-to-convert')
 const calcButton = document.getElementById('calc-button')
 const calcResults = document.getElementById('calc-results')
+const form = document.querySelector('.container')
 
-calcButton.addEventListener('click', (e) => {
+calcButton.addEventListener('click', () => {
+    getCalculation()
+})
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    getCalculation()
+})
+
+function getCalculation() {
     calcResults.innerHTML = ""
-    if (fontSize.value) {
-        const oneRem = (100 / fontSize.value) / 100        
+    if (fontSize.value && sizesToConvert.value) {
+        const oneRem = (100 / fontSize.value) / 100
+        console.log(sizesToConvert.value.split(','))
         sizesToConvert.value.split(',').forEach((size) => {
             let li = document.createElement('li')
-            let result = document.createTextNode(parseInt(size) * oneRem)
-            li.appendChild(result)
-            calcResults.appendChild(li)
+            if (size == fontSize.value) {
+                let result = document.createTextNode(`${size}px = ${parseInt(size) * oneRem}rem`)
+                li.appendChild(result)
+                let span = document.createElement('span')
+                span.classList.add('bold')
+                let base = document.createTextNode(' (Base)')
+                span.appendChild(base)
+                li.appendChild(span)
+                calcResults.appendChild(li)
+            } else {
+                let result = document.createTextNode(`${size}px = ${parseInt(size) * oneRem}rem`)
+                li.appendChild(result)
+                calcResults.appendChild(li)
+            }
         })
     } else {
         calcResults.innerHTML = "Enter a number please"
     }
-})
-
-
+}
 
 
 // A really weird way using previousElementSibling
