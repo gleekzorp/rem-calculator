@@ -18,3 +18,5 @@
     - 16px = 1rem(base)
     - ect...
 - Create application in React
+- Might need to add some error checking for the second input
+  - What if a user puts in 10px instead of 10?
